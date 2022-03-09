@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+# Scribe OCR
+Web interface for proofreading OCR and creating fully-digitized documents. 
 
-You can use the [editor on GitHub](https://github.com/Balearica/scribeocr-docs/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+# Overview
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Scribe OCR is a free and open-source interface for visualizing and editing OCR results.  By precisely overlaying editable OCR text over source images, it allows for easy proofreading and the creation of fully digitized versions of print documents. 
 
-### Markdown
+To replicate the document as closely as possible, Scribe OCR generates a custom overlay font for each document, optimized using the provided OCR data.  This improves the alignment between the original scan and overlay text, and by making errors more obvious, can significantly decrease the time spent proofreading.  For example, the images below show the same text, with and without Font Optimization enabled. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<img src="https://raw.githubusercontent.com/Balearica/scribeocr-docs/gh-pages/img/optimization_comp1a1.png" width="700"><img src="https://raw.githubusercontent.com/Balearica/scribeocr-docs/gh-pages/img/optimization_comp1b1.png" width="700">
 
-```markdown
-Syntax highlighted code block
+To show how Scribe OCR can be used to digitize documents, three versions of a scanned book page found at [Archive.org](https://archive.org/details/in.ernet.dli.2015.350580/page/n17/mode/2up) are shown below.  The first panel shows the original image.  The second shows Scribe OCR’s Proofreading Mode, which precisely layers colored OCR text over the source image.  In addition to overlapping poorly with the underlying image, most errors are also colored red, which indicates the OCR engine flagged them as low-confidence.  The third panel shows Ebook Mode, which only contains the (now corrected) text layer.  
 
-# Header 1
-## Header 2
-### Header 3
+![Display Mode Comparison](https://raw.githubusercontent.com/Balearica/scribeocr-docs/gh-pages/img/mode_comp1.png)
 
-- Bulleted
-- List
+Most OCR output formats either compromise on faithfully representing the original document (e.g. text or markdown that omits formatting) or produce enormous files by printing invisible text over the original scanned images.  In contrast, the third panel above (Ebook Mode) faithfully represents the original scan while maintaining a small file size.  (Exporting .pdfs with the traditional invisible text-over-image approach is also supported for users only interested in proofreading.)  
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+# Getting Started
 
-[Link](url) and ![Image](src)
-```
+Scribe OCR is not an OCR engine, so you will first need OCR data from the engine of your choice.  Both .hocr files from Tesseract (free) and .xml files from Abbyy (paid) are supported.  Be sure to enable character-level output (click here to learn more). 
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Alternatively, if you just want to try out Scribe OCR, sample files can be found here.  You can also download scans and OCR data for out-of-copyright books from Archive.org. 
+Once you have both a scanned document (either a collection of .png or .jpeg files or a single .pdf) and OCR data (.hocr or Abbyy .xml), click “Choose files” and select all relevant files. 
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Balearica/scribeocr-docs/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Once your files have loaded, you can get started editing.  An explanation of the interface and walk-through of the editing process can be found here in written form, and here in video form. 
