@@ -2,7 +2,7 @@
 Web interface for proofreading OCR and creating fully-digitized documents. 
 
 # Resources
-- [FAQ](FAQ.md)
+- [FAQ](faq)
 
 # Overview
 
