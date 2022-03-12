@@ -1,8 +1,5 @@
 # FAQ/Support
 
-## Table of Contents
-It may be possible to use data from other OCR engines that export to .hocr.  However, doing so has not been tested.  If you use Scribe OCR with another engine, feel free to open an issue and report how it goes. 
-
 ## Loading Data
 
 ### Is character-level OCR data required?  Why?
