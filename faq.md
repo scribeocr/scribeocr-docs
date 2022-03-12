@@ -13,6 +13,9 @@ For Tesseract, set the config variable `hocr_char_boxes=1`.  For example, the en
 ### Are other OCR engines supported?
 It may be possible to use data from other OCR engines that export to .hocr.  However, doing so has not been tested.  If you use Scribe OCR with another engine, feel free to open an issue and report how it went. 
 
+### Why is text being printed on the wrong image?
+When multiple image (.png or .jpeg) and/or OCR (.hocr or .xml) files are uploaded, all files of the same type are ordered alphabetically.  Check that your files are named in alphabetical order.  A common mistake is forgetting to pad numbers with leading 0s (remember that “pic_10” comes before “pic_2” in alphabetic order). 
+
 ## Reviewing OCR Text
 
 ### Why isn't the overlay text in my document lining up as well as in the examples? 
@@ -28,9 +31,6 @@ If your results are significantly worse than the above example, check the follow
     -	Documents that are warped (the lines are either not straight or not parallel to each other) will therefore not align with the text. 
 
 If none of them explain your issue, please open a Git Issue with enough data to reproduce the problem. 
-
-### Why is text being printed on the wrong image?
-When multiple image (.png or .jpeg) and/or OCR (.hocr or .xml) files are uploaded, all files of the same type are ordered alphabetically.  Check that your files are named in alphabetical order.  A common mistake is forgetting to pad numbers with leading 0s (remember that “pic_10” comes before “pic_2” in alphabetic order). 
 
 ### Is character formatting information (e.g. italics) in OCR data used when printing overlay text? 
 Character formatting data (specifically the identification of italics, small caps, and superscripts) is used for Abbyy but not Tesseract.  Testing found this data to be generally reliable for Abbyy.  However, for Tesseract formatting data was found to be so unreliable that including it caused more work than it alleviated.  
