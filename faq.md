@@ -44,10 +44,10 @@ No.  The entire program runs on your browser.  An downloadable/offline version c
 
 ### Why is the application running slowly?
 If performance is poor, check the following possible explanations. 
-1.	Are you running on slow device?
+1.	Are you using a slow device?
     -	The entire program is executed locally in your browser, so performance will vary significantly by device. 
 1.	Are you using a .pdf for images (rather than .png or .jpeg)? 
-    -	Using a .pdf file is currently significantly slower than using .png or .jpeg files (as the latter are native to web while the former requires extra processing).
+    -	Using a .pdf file is currently significantly slower than using .png or .jpeg files (as pdfs are rendered to images by a separate library).
     -	Consider converting your .pdf to .jpeg or .png images and trying again.
         - This can be accomplished using GhostScript on Linux with the following command:
         -	`gs -dNOPAUSE -dBATCH -sDEVICE=pnggray -dUseCropBox -r300 -sOutputFile="Pic-%03d.png" [pdf file]`
