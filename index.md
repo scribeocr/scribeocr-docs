@@ -4,10 +4,6 @@ title: Home
 nav_order: 1
 ---
 
-
-# Scribe OCR
-Web interface for proofreading OCR and creating fully-digitized documents. 
-
 # Overview
 
 Scribe OCR is a free and open-source interface for visualizing and editing OCR results.  By precisely overlaying editable OCR text over source images, it allows for easy proofreading and the creation of fully digitized versions of print documents. 
