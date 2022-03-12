@@ -1,3 +1,10 @@
+---
+layout: default
+title: Home
+nav_order: 1
+---
+
+
 # Scribe OCR
 Web interface for proofreading OCR and creating fully-digitized documents. 
 
