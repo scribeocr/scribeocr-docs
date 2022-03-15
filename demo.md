@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Demo (Video)
 nav_order: 2
 ---
 
