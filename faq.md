@@ -1,6 +1,6 @@
 # FAQ/Support
 
-## Loading Data
+## Loading Existing OCR Data
 
 ### Is character-level OCR data required?  Why?
 For Tesseract .hocr, character-level data is highly recommended but not required.  If no character-level data is found, words will still be overlayed, however font optimization will be disabled (as not enough information exists to create an optimized font).
@@ -8,7 +8,7 @@ For Tesseract .hocr, character-level data is highly recommended but not required
 For Abbyy .xml, character-level data is required.  While Tesseract will still report word-level metrics when character-level metrics are disabled, Abbyy does not report where words are positioned. 
 
 ### How can I create character-level data in my OCR program? 
-For Tesseract, set the config variable `hocr_char_boxes=1`.  For example, the entire command might be ` tesseract [input file] [output file] -c hocr_char_boxes=1 hocr`.
+For Tesseract, set the config variable `hocr_char_boxes=1`.  For example, the entire command might be `tesseract [input file] [output file] -c hocr_char_boxes=1 hocr`.  Alternatively, all OCR data generated using Scribe OCR's built-in Tesseract engine will utilize character-level data.  
 
 ### Are other OCR engines supported?
 It may be possible to use data from other OCR engines that export to .hocr.  However, doing so has not been tested.  If you use Scribe OCR with another engine, feel free to open an issue and report how it went. 
@@ -18,6 +18,20 @@ When multiple image (.png or .jpeg) and/or OCR (.hocr or .xml) files are uploade
 
 ### Why has text disappeared from the PDF I uploaded? 
 Scribe OCR does not have the ability to render text and ignores any text content encountered.  It expects .pdf files with images of text, not text-based PDFs.  
+
+## Recognizing Text with Built-in OCR Engine
+
+### What devices support the built-in OCR engine? 
+The built-in engine should run on all common device/browser combinations, however performance will vary significantly between devices.  In addition to some devices being faster than others (in terms of clock speed, cores, etc.), there are 2 versions of the built-in Tesseract OCR engine that Scribe OCR chooses between based on what your device supports.  The fast (SIMD-enabled) version is loaded for users with modern Intel/AMD processors (supporting SSE 4.2).  The slower (SIMD disabled) version is loaded on all other devices.  You can confirm which version has been loaded on your device by checking `About > Debug Info > SIMD Support`. 
+
+Notably, while the SIMD-disabled version is much slower using the Tesseract LSTM engine, no such disparity exists using the Tesseract Legacy engine.  Therefore, if you do not have access to a device that supports the SIMD-enabled version and are finding Tesseract LSTM performance unacceptably slow, consider switching to the Tesseract Legacy engine. 
+
+### Why is recognition slow?
+If OCR performance is poor, check the following possible explanations. 
+1. Are you using a device that supports the faster (SIMD-enabled) version of Tesseract? 
+    -	See "What devices support the built-in OCR engine?" section above
+1.	Are you using a slow device?
+    -	The entire program is executed locally in your browser, so performance will vary significantly by device. 
 
 ## Reviewing OCR Text
 
