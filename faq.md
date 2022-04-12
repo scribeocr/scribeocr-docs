@@ -16,6 +16,9 @@ It may be possible to use data from other OCR engines that export to .hocr.  How
 ### Why is text being printed on the wrong image?
 When multiple image (.png or .jpeg) and/or OCR (.hocr or .xml) files are uploaded, all files of the same type are ordered alphabetically.  Check that your files are named in alphabetical order.  A common mistake is forgetting to pad numbers with leading 0s (remember that “pic_10” comes before “pic_2” in alphabetic order). 
 
+### Why has text disappeared from the PDF I uploaded? 
+Scribe OCR does not have the ability to render text and ignores any text content encountered.  It expects .pdf files with images of text, not text-based PDFs.  
+
 ## Reviewing OCR Text
 
 ### Why isn't the overlay text in my document lining up as well as in the examples? 
@@ -37,6 +40,11 @@ Character formatting data (specifically the identification of italics, small cap
 
 ### How can I save my progress and continue editing later?
 Download your current document as HOCR.  This can be imported later (alongside your images/pdfs) to continue editing. 
+
+## Exporting Data
+
+### Why is the PDF I downloaded larger than the PDF I uploaded? 
+Scribe OCR is built to use .png and .jpeg images, and does not currently support directly editing PDFs.  When it encounters a .pdf, it simply renders each page to a .png file as a convenience.  In cases when an input .pdf is highly optimized, rendering to a series of .png files can significantly increase file size.    
 
 ## Miscellaneous
 ### Is my data uploaded to a server?
