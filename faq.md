@@ -2,6 +2,9 @@
 
 ## Loading Existing OCR Data
 
+### Can I visualize/edit the existing OCR data in a PDF file?  
+No, this is currently not supported.  Overlay text must be generated using the built-in OCR engine, or provided via separate Tesseract .hocr or Abbyy .xml files. 
+
 ### Is character-level OCR data required?  Why?
 For Tesseract .hocr, character-level data is highly recommended but not required.  If no character-level data is found, words will still be overlayed, however font optimization will be disabled (as not enough information exists to create an optimized font).
 
@@ -33,7 +36,7 @@ If OCR performance is poor, check the following possible explanations.
 1.	Are you using a slow device?
     -	The entire program is executed locally in your browser, so performance will vary significantly by device. 
 
-## Reviewing OCR Text
+## Reviewing and Editing OCR Text
 
 ### Why isn't the overlay text in my document lining up as well as in the examples? 
 If your results are significantly worse than the above example, check the following possible explanations.  
@@ -54,6 +57,9 @@ Character formatting data (specifically the identification of italics, small cap
 
 ### How can I save my progress and continue editing later?
 Download your current document as HOCR.  This can be imported later (alongside your images/pdfs) to continue editing. 
+
+### Why can't I precisely adjust the position of words? 
+
 
 ## Exporting Data
 
