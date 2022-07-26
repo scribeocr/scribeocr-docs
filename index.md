@@ -6,7 +6,7 @@ nav_order: 1
 
 # Overview
 
-Scribe OCR is a free and open-source interface for visualizing and editing OCR results.  By precisely overlaying editable OCR text over source images, it allows for easy proofreading and the creation of fully digitized versions of print documents. 
+Scribe OCR is a free and open-source web application for recognizing text, proofreading OCR data, and creating fully-digitized documents.  By precisely overlaying editable OCR text over source images, it allows for easy proofreading and the creation of fully digitized versions of print documents. 
 
 To replicate the document as closely as possible, Scribe OCR generates a custom overlay font for each document, optimized using the provided OCR data.  This improves the alignment between the original scan and overlay text, and by making errors more obvious, can significantly decrease the time spent proofreading.  For example, the images below show the same text, with and without Font Optimization enabled. 
 
@@ -21,9 +21,6 @@ Most OCR output formats either compromise on faithfully representing the origina
 
 # Getting Started
 
-Scribe OCR is not an OCR engine, so you will first need OCR data from the engine of your choice.  Both .hocr files from Tesseract (free) and .xml files from Abbyy (paid) are supported.  Be sure to enable character-level output (click here to learn more). 
+To get started, visit [scribeocr.com](scribeocr.com) and import a scanned document.  The document may be a single .pdf or series of .png or .jpeg images (named in alphabetic order).  You can then recognize text by switching to the “Recognize” tab and clicking “Recognize Text”.  
 
-Alternatively, if you just want to try out Scribe OCR, sample files can be found here.  You can also download scans and OCR data for out-of-copyright books from Archive.org. 
-Once you have both a scanned document (either a collection of .png or .jpeg files or a single .pdf) and OCR data (.hocr or Abbyy .xml), click “Choose files” and select all relevant files. 
-
-Once your files have loaded, you can get started editing.  An explanation of the interface and walk-through of the editing process can be found here in written form, and here in video form. 
+Alternatively, you can upload your own OCR data alongside your pdf/image files.  Both .hocr files from Tesseract and .xml files from Abbyy are supported.  Be sure to enable character-level output.
