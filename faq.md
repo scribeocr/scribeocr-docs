@@ -93,4 +93,4 @@ Scribe OCR is built to use .png and .jpeg images, and does not currently support
 
 ## Miscellaneous
 ### Is my data uploaded to a server?
-No.  The entire program runs on your browser.  An downloadable/offline version could be offered in the future.
+No.  The entire program runs on your browser.  A downloadable/offline version could be offered in the future.
