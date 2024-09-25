@@ -44,7 +44,7 @@ Multiple adjacent words can be combined into a single word by selecting the word
 
 | Shortcut                  | Action                                      |
 |---------------------------|---------------------------------------------|
-| `Tab`                     | Select next word                            |
+| `Tab`                     | Select next word[^next-word]                |
 | `Shift + Tab`             | Select previous word                        |
 | `ArrowRight`              | Select word to right                        |
 | `ArrowLeft`               | Select word to left                         |
@@ -52,8 +52,6 @@ Multiple adjacent words can be combined into a single word by selecting the word
 | `ArrowDown`               | Select word beneath selected word           |
 | `Shift + ArrowRight`      | Expand selection to right                   |
 | `Shift + ArrowLeft`       | Expand selection to left                    |
-
-Note that the "next word" (selected with `Tab`) can be different from the word to the right (selected with `ArrowRight`). The "next" word is selected based on what Scribe.js believes the reading order is. When the end of one line is reached, the "next" word is the start of the following line. While this works well for most documents, the "next" element can be unpredictable for documents without an unambiguous reading order--for example, data tables or documents with many floating elements. In these cases, the arrow keys can be used to select words to the visual left/right of the current selection.
 
 ### Edit Words
 Once words have been selected, shortcuts using the `Ctrl` modifier can be used to edit them.
@@ -71,3 +69,5 @@ Once words have been selected, shortcuts using the `Ctrl` modifier can be used t
 | `Enter`                   | Start/stop editing word text (from start)   |
 | `Alt + Enter`             | Start/stop editing word text (from end)     |
 | `Ctrl + Delete`           | Delete word(s)                              |
+
+[^next-word]: The "next word" (selected with `Tab`) is selected based on what Scribe.js believes the reading order is.  After reaching the end of a line, the `Tab` shortcut will jump to whatever it believes the next line in the document is, whereas `ArrowRight` will go to the word visually to the right (if any).  The "next word" can be unpredictable for documents without an unambiguous reading order--for example, data tables or documents with many floating elements.
