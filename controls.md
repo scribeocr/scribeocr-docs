@@ -31,8 +31,8 @@ A single word can be split into two words by positioning the cursor where the wo
 Multiple adjacent words can be combined into a single word by selecting the words, right clicking, and selecting `Merge Words`.
 
 # Keyboard Shortcut Cheat Sheet
-
 ### General
+
 | Shortcut                  | Action                                      |
 |---------------------------|---------------------------------------------|
 | `Ctrl + +` or `Ctrl + =`  | Zoom in                                     |
@@ -41,6 +41,7 @@ Multiple adjacent words can be combined into a single word by selecting the word
 | `PageDown`                | Next page                                   |
 
 ### Select Words
+
 | Shortcut                  | Action                                      |
 |---------------------------|---------------------------------------------|
 | `Tab`                     | Select next word                            |
@@ -63,9 +64,10 @@ Once words have been selected, shortcuts using the `Ctrl` modifier can be used t
 | `Ctrl + b`                | Toggle bold font style                      |
 | `Ctrl + Alt + +`          | Increase word font size                     |
 | `Ctrl + Alt + -`          | Decrease word font size                     |
-| `Ctrl + ArrowLeft`       | Move the word's left bound to the left     |
-| `Ctrl + ArrowRight`        | Move the word's left bound to the right      |
-| `Ctrl + Alt + ArrowLeft` | Move the word's right bound to the left    |
-| `Ctrl + Alt + ArrowRight`  | Move the word's right bound to the right     |
-| `Enter`                   | Start/stop editing word text                |
+| `Ctrl + ArrowLeft`        | Move the word's left bound to the left      |
+| `Ctrl + ArrowRight`       | Move the word's left bound to the right     |
+| `Ctrl + Alt + ArrowLeft`  | Move the word's right bound to the left     |
+| `Ctrl + Alt + ArrowRight` | Move the word's right bound to the right    |
+| `Enter`                   | Start/stop editing word text (from start)   |
+| `Alt + Enter`             | Start/stop editing word text (from end)     |
 | `Ctrl + Delete`           | Delete word(s)                              |
