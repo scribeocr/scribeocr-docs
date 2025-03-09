@@ -49,7 +49,7 @@ Once the text layer and table layout are both accurate, it is time to export the
 
 ![data_table_7.png]({{ site.baseurl }}/img/data_table_7.png)
 
-As a general practice, it is prudent to always download a `.hocr` file in addition the file format you ultimately want.  HOCR is the only format that allows for restoring an editing session later, so allows for fixing any mistakes you may notice in the future. 
+As a general practice, it is prudent to always download a `.scribe` file in addition to the file format you ultimately want.  While several output formats can be re-imported, `.scribe` is the only format that allows for restoring an editing session later without losing any data, so allows for fixing any mistakes you may notice in the future.  `.scribe` files only contain the text layer, so they must imported alongside the original image/PDF files to fully restore an editing session.
 
 # Common Special Cases
 
